@@ -1,7 +1,6 @@
 package ch25_3;
 import lombok.Data;
 
-import jakarta.persistence.ManyToMany;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -19,7 +18,6 @@ public class Taco {
     private Date createdAt = new Date();
 
     @Size(min=1, message="You must choose at least 1 ingredient")
-    @ManyToMany()
     private List<Ingredient> ingredients = new ArrayList<>();
 
     public void addIngredient(Ingredient ingredient) {

@@ -1,6 +1,5 @@
 package ch25_3;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import org.springframework.data.annotation.Id;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -23,7 +22,6 @@ public class TacoOrder implements Serializable {
 
     private Date placedAt = new Date();
 
-    @ManyToOne
     private User user;
     public void setUser(User user) {this.user = user;}
     public User getUser() {return user;}

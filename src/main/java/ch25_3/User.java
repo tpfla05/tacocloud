@@ -1,6 +1,6 @@
 package ch25_3;
 
-import jakarta.persistence.*;
+import org.springframework.data.annotation.Id;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
@@ -17,7 +17,6 @@ public class User implements UserDetails {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
     private String id;
 
     private final String username;
